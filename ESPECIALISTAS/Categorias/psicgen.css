@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  max-width: 390px;
+  max-height: 845px;
+  font-family: "Quicksand", serif;
+  
+}
+
+
+.contenedor{
+  background: #f6fcfd;
+  width: 390px;
+  height: 845px;
+}
+
+.regresar{
+    position: relative;
+     width: 35px;
+     height: 35px;
+     top: 30px;
+     left: 20px;
+ }
+
+h1{
+    position: relative;
+    color: #37A1D2;
+    font-size: 22px;
+    left: 30px;
+    top: 40px;
+  }
+
+  .perfilesp{
+    width: 150px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+
+  .imgdoc{
+    width: 150px;
+    height: 180px;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .imgdoc:hover{
+    transform: translateY(-5px);
+  }
+
+  .cont{
+    position: relative;
+    display: flex;
+    flex-direction: row;       /* fila horizontal */
+    justify-content: center;   /* centra las tarjetas */
+    gap: 40px;                 /* espacio entre ellas */
+    flex-wrap: nowrap;         /* evita que bajen a otra línea */
+    padding: 20px;
+    top: 40px;
+  }
+
+  .name{
+    font-weight: bold;
+    font-size: 15px;
+    margin: 4px;
+  }
+
+  .categoriap{
+    font-size: 15px;
+    margin: 0px;
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+  
+  .valoracion,
+  .work {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .estrella{
+    color: #f7b500;
+  }
+  
+  .icon {
+    font-size: 16px;
+  }
+  
+  .puntuacion {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .cont2{
+    position: relative;
+    display: flex;
+    flex-direction: row;       /* fila horizontal */
+    justify-content: center;   /* centra las tarjetas */
+    gap: 40px;                 /* espacio entre ellas */
+    flex-wrap: nowrap;         /* evita que bajen a otra línea */
+    padding: 20px;
+    top: 40px;
+  }
+
+  a {
+    text-decoration: none;     /* Quita subrayado */
+    color: inherit;            /* Usa el color del texto normal */
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: inherit;
+  }

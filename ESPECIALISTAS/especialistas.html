@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Especialistas | Hear Mind</title>
+    <link rel="stylesheet" href="especialistas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="header">
+        <h1>Encuentra un especialista para ti</h1>
+
+    <form class="search-container" id="formBusqueda">
+        <input type="text" id="busqueda" placeholder="Buscar...">
+        <button type="submit" class="search-button" id="btnBuscar" aria-label="Buscar">
+          <!-- Ícono de lupa -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" fill="none"/>
+            <line x1="16.5" y1="16.5" x2="22" y2="22" stroke="currentColor" stroke-width="2" />
+          </svg>
+        </button>
+      </form>
+      <div id="resultados"  class="contenedor-resultados"></div>
+    </div>
+
+    <h2>Categorias</h2>
+    <div class="menu-categorias" id="menuCategorias">
+        <a href="../ESPECIALISTAS/Categorias/psiclinica.html"><div class="categoria">Psicólogia clínica</div></a>
+        <a href="../ESPECIALISTAS/Categorias/psic-in.html"><div class="categoria">Psicólogia infantil</div></a>
+        <a href="../ESPECIALISTAS/Categorias/psiqgen.html"><div class="categoria">Psiquiatria general</div></a>
+        <a href="../ESPECIALISTAS/Categorias/psiq-in.html"><div class="categoria">Psiquiatria infantil</div></a>
+        <a href="../ESPECIALISTAS/Categorias/tp-o.html"><div class="categoria">Terapia ocupacional</div></a>
+        <a href="../ESPECIALISTAS/Categorias/t-familiar.html"><div class="categoria">Terapia familiar</div></a>
+        <a href="../ESPECIALISTAS/Categorias/t-pareja.html"><div class="categoria">Terapia de pareja</div></a>
+      </div>
+
+      <br>
+
+    <h3>Tus especialistas</h3>
+     <div class="cont">
+        <a href="Perfiles/RodrigoG.html">
+          <div class="perfilesp">
+            <img class="imgdoc" src="../IMG/psic4.jpg" alt="">
+            <p class="name">Dr. Rodrigo Gonzales</p>
+            <p class="categoriap">Psicólogia clínica</p>
+            <br>
+            <div class="info">
+              <div class="valoracion">
+                <div class="estrella"><i class="fas fa-star icon"></i></div>
+                <p class="puntuacion">4.6</p>
+              </div>
+              <div class="work">
+                <i class="fa-regular fa-clock"></i>
+                <p class="puntuacion">9 años</p>
+        </div>
+        </div>
+      </div>
+    </a>
+
+        <a href="Perfiles/JuliaM.html">
+          <div class="perfilesp">
+            <img class="imgdoc" src="../IMG/psiqg.jpg" alt="">
+            <p class="name">Dra. Julia Mendoza </p>
+            <p class="categoriap">Psiquiatria general</p>
+            <br>
+            <div class="info">
+              <div class="valoracion">
+                <div class="estrella"><i class="fas fa-star icon"></i></div>
+                <p class="puntuacion">4.9</p>
+              </div>
+              <div class="work">
+                <i class="fa-regular fa-clock"></i>
+                <p class="puntuacion">9 años</p>
+        </div>
+        </div>
+     </div>
+    </div>
+  </a>
+
+  <div class="menu">
+    <ul>
+      <li class="list" onclick="setActiveIndex(0)">
+          <a href="../INICIO PACIENTES/iniciopacientes.html">
+              <span class="icon"><i class="fi fi-rr-home"></i></span>
+              <span class="text">Inicio</span>
+          </a>
+      </li>
+      <li class="list" onclick="setActiveIndex(1)">
+          <a href="#">
+              <span class="icon"><i class="fi fi-rr-calendar-clock"></i></span>
+              <span class="text">Calendario</span>
+          </a>
+      </li>
+      <li class="list" onclick="setActiveIndex(2)">
+          <a href="../recursosmenu.html">
+              <span class="icon"><i class="fi fi-rr-apps"></i></span>
+              <span class="text">Recursos</span>
+          </a>
+      </li>
+      <li class="list" onclick="setActiveIndex(3)">
+          <a href="../RETO/reto.html">
+              <span class="icon"><i class="fi fi-rr-user-hard-work"></i></span>
+              <span class="text">Desafío</span>
+          </a>
+      </li>
+      <li class="list active" onclick="setActiveIndex(4)">
+          <a href="../ESPECIALISTAS/especialistas.html">
+              <span class="icon"><i
+                  class=
+                  "fi fi-rr-user-md"
+                  ></i></span>
+              <span class="text">Especialistas</span>
+          </a>
+      </li>
+      <div class="indicador"></div>
+    </ul>
+  </div>
+    </div>
+    
+    
+    
+    
+
+
+      <script src="especialistas.js"></script>
+</body>
+</html>
