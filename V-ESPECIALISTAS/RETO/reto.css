@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  max-width: 390px;
+  max-height: 845px;
+  font-family: "Quicksand", serif;
+  
+}
+
+.container{
+  background-color: #ffffffa6;
+  width: 390px;
+  height: 845px;
+}
+  
+  /* Imagen */
+  .header-image img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+    bottom: 20px;
+  }
+  
+  /* Títulos */
+  .titulo {
+    color: #9D5DF6;
+    font-size: 35px;
+    margin: 10px;
+  }
+  
+  .subtitulo {
+    font-size: 16px;
+    margin: 10px;
+    font-weight: 500;
+
+  }
+  
+  /* Tarjetas horizontales */
+  .cards {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin: 10px;
+  }
+  
+  .card {
+    flex-shrink: 0;
+    width: 120px;
+    height: 165px;
+    background-color: #c1b2fa;
+    border-radius: 30px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    scroll-snap-align: start;
+    overflow: hidden;
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    border-radius: 24px;
+    border: 2px solid #9889E0;
+    pointer-events: none;
+  }
+  
+  .flower-icon {
+    width: 60px;
+    height: 60px;
+    opacity: 0.9;
+    z-index: 1;
+  }
+  
+  
+  /* Botón + */
+  .publicar-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+   
+  }
+  
+  .boton-mas {
+    background-color: #9889E0;
+    width: 80px;
+    height: 45px;
+    border: none;
+    border-radius: 12px;
+    font-size: 28px;
+    color: black;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    margin-top: 50px;
+  }
+  /* Efecto de giro al hacer clic */
+  .card {
+    width: 120px;
+    height: 165px;
+    background-color: #c1b2fa;
+    border-radius: 30px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    scroll-snap-align: start;
+    overflow: hidden;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+  
+  .card.volteada {
+    transform: rotateY(180deg);
+  }
+  
+  .card .reto-info {
+    display: none;
+  }
+  .card.no-transicion {
+    transition: none !important;
+  }
+  
+  
+
+/* Modal */
+.reto-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 390px;
+  height: 845px;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.reto-modal.show {
+  display: flex;
+}
+
+.reto-contenido {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  width: 210px;
+  height: auto;
+  animation: aparecer 0.4s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reto-contenido h2 {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #9889E0;
+}
+
+#textoReto {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.imagen-reto-modal {
+  width: 80px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 28px;
+  color: #555;
+  cursor: pointer;
+}
+
+@keyframes aparecer {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.btn-pub{
+  position: relative;
+    bottom: -30px;
+    left: 160px;
+    background: #C1B2FA;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    width: 56px;
+    height: 56px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    cursor: pointer;
+ }
+
+ .btn-pub:hover{
+   color: #ffffff;
+   background-color: #7E6BC4;
+ }
+
+ #plus{
+  position: relative;
+  left: 16px;
+  top: 16px;
+ }
+/* Botón cerrar */
+
+/* MENÚ */
+:root{
+  --crl: #ffffff;
+}
+
+.menu{
+  bottom: 0;
+  position: fixed;
+  width: 390px;
+  height: 70px;
+  background: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  max-width: 390px; /* para coincidir con tu diseño */
+}
+
+.menu ul{
+  display: flex;
+  width: 350px;
+  position: relative;
+  right: 20px;
+}
+
+.menu ul li{
+  position: relative;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+
+.menu ul li a{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.menu ul li a .icon{
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.5em;
+  text-align: center;
+  transition: 0.5s;
+  color: #8659D9;
+  
+}
+
+
+.menu ul li.active a .icon{
+  transform: translateY(-35px);
+  color: white;
+}
+
+.menu ul li a .text{
+  position: absolute;
+  color: #8659D9;
+  font-weight: 0.75em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.text{
+  font-size: 12px;
+  color: #00A7F5;
+}
+
+.menu ul li.active a .text{
+ opacity: 1; 
+ transform: translateY(10px);
+}
+
+.indicador{
+  position: absolute;
+  top: -50%;
+  width: 60px;
+  height: 60px;
+  background-color: #C1B2FA;
+  border-radius: 50%;
+  border: 4px solid var(--crl);
+  transition: transform 0.4s ease, background-color 0.3s ease;
+}
+
+
+.menu ul li:nth-child(1).active ~ .indicador{
+  transform: translateX(calc(70px *0));
+}
+.menu ul li:nth-child(2).active ~ .indicador{
+  transform: translateX(calc(70px *1));
+}
+.menu ul li:nth-child(3).active ~ .indicador{
+  transform: translateX(calc(70px *2));
+}
+.menu ul li:nth-child(4).active ~ .indicador{
+  transform: translateX(calc(70px *3));
+}
+.menu ul li:nth-child(5).active ~ .indicador{
+  transform: translateX(calc(70px *4));
+}
+
+.indicador.animate {
+  transition: 0.5s ease;
+}
+
+
+/* ------*/
+
+a{
+  text-decoration: none;
+}
+
+/* ------*/
+
+  
+  
+  

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Reto</title>
+    <link rel="stylesheet" href="reto.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+
+</head>
+<body>
+  
+  <div class="container">
+    <!-- Imagen principal -->
+    <div class="header-image">
+      <img src="../../IMG/8527923.jpg" alt="reto-img" />
+    </div>
+  
+    <!-- Título -->
+    <h1 class="titulo">Desafíos</h1>
+    <p class="subtitulo">Retos publicados</p>
+  
+    <!-- Tarjetas -->
+    <div class="cards">
+
+      
+      <div class="card">
+        <img src="../../IMG/logo.png" class="flower-icon" />
+        <!-- Elementos ocultos dentro de la tarjeta -->
+        <div class="reto-info" style="display:none;">
+          <p class="texto-reto">Mirate al espejo una vez al dia</p>
+          <img class="img-reto" src="../../IMG/corazonPesas.png" />
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../../IMG/logo.png" class="flower-icon" />
+    
+        <!-- Elementos ocultos dentro de la tarjeta -->
+        <div class="reto-info" style="display:none;">
+          <p class="texto-reto">Bebe 2 vasos de agua</p>
+          <img class="img-reto" src="../../IMG/corazonPesas.png" />
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../../IMG/logo.png" class="flower-icon" />
+    
+        <!-- Elementos ocultos dentro de la tarjeta -->
+        <div class="reto-info" style="display:none;">
+          <p class="texto-reto">Escribe algo positivo sobre ti</p>
+          <img class="img-reto" src="../../IMG/corazonPesas.png" />
+
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../../IMG/logo.png" class="flower-icon" />
+    
+        <!-- Elementos ocultos dentro de la tarjeta -->
+        <div class="reto-info" style="display:none;">
+          <p class="texto-reto">Haz algo que te haga feliz</p>
+          <img class="img-reto" src="../../IMG/corazonPesas.png" />
+        </div>
+      </div>
+
+
+    </div>
+    
+    <!-- Publicar nuevo reto -->
+     <p  class="subtitulo">Publicar nuevo reto</p>
+    <a href="publicarReto.html"><div class="btn-pub"><i id="plus" class="fi fi-br-plus"></i></div></a>
+
+    <!--MENÚ-->
+
+    <div class="menu">
+      <ul>
+        <li class="list" onclick="setActiveIndex(0)">
+            <a href="../INICIO/inicioEspecia.html">
+                <span class="icon"><i class="fi fi-rr-home"></i></span>
+                <span class="text">Inicio</span>
+            </a>
+        </li>
+        <li class="list" onclick="setActiveIndex(1)">
+            <a href="../CALENDARIO/calendar.html">
+                <span class="icon"><i class="fi fi-rr-calendar-clock"></i></span>
+                <span class="text">Calendario</span>
+            </a>
+        </li>
+        <li class="list" onclick="setActiveIndex(2)">
+            <a href="../RECURSOS/recursos.html">
+                <span class="icon"><i class="fi fi-rr-apps"></i></span>
+                <span class="text">Recursos</span>
+            </a>
+        </li>
+        <li class="list active" onclick="setActiveIndex(3)">
+            <a href="../RETO/reto.html">
+                <span class="icon"><i class="fi fi-rr-user-hard-work"></i></span>
+                <span class="text">Desafío</span>
+            </a>
+        </li>
+        <li class="list" onclick="setActiveIndex(4)">
+            <a href="../PACIENTES/pacientes.html">
+                <span class="icon"><i class="fi fi-rr-user-add"></i></span>
+                <span class="text">Pacientes</span>
+            </a>
+        </li>
+        <div class="indicador"></div>
+      </ul>
+    </div>
+
+  </div>
+  
+  <div class="reto-modal" id="retoModal">
+    <div class="reto-contenido">
+      <span class="cerrar" id="cerrarModal">&times;</span>
+      <img id="imagenReto" src="" alt="Imagen reto" class="imagen-reto-modal" />
+      <h2>Reto del día</h2>
+      <p id="textoReto">Texto del reto</p>
+    </div>
+  </div>
+  <script src="reto.js"></script>
+</body>
+</html>

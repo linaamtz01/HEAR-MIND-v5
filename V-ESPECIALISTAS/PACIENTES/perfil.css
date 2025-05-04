@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    max-width: 390px;
+    max-height: 844px;
+    font-family: "Quicksand", serif;
+    display: flex;
+  }
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  .container {
+    background-color: #fff;
+    width: 390px;
+    padding: 20px;
+    font-family: "Quicksand", serif;
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+    margin-top: 130px;
+    margin-left: 25px;
+    position: relative;
+
+  }
+  
+  .imgperfil {
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    display: block;
+    margin: 10px;
+    position: relative;
+    left: -15px;
+    right: 1px;
+    top: 70px;           
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  
+  .back-btns {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 30px;
+    left: 5px;
+  }
+  
+  .back {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  
+  .info{
+    position: relative;
+    top: 77px;
+    left: -30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .info h1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #3D348B;
+    margin: 0;
+  }
+  
+  .paciente {
+    margin: 4px 0;
+    color: #555;
+    font-size: 14px;
+  }
+
+  .extra{
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre Edad y Género */
+    margin-top: 10px;
+  }
+  
+  .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  
+.separador {
+  width: 1px;
+  height: 35px;
+  background-color: #000; /* color de la barrita */
+}
+  
+.icons {
+  margin: 10px 0;
+  position: relative;
+  bottom: 0px;
+  width: 150px;
+  display: flex;
+}
+
+.icons button {
+  background-color: #C1B2FA;
+  color: #f0f0f0;
+  border: none;
+  border-radius: 100%;
+  padding: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+}
+
+  .toggle-container {
+  display: flex;
+  background-color: #ccc;
+  border-radius: 25px; 
+  width: 350px;
+  position: relative;
+  margin-top: 95px; 
+  justify-content: center;
+  font-family: "Quicksand";
+  margin-bottom: 30px;
+  }
+
+   /* Botones invisibles */
+  .toggle-container input[type="radio"] {
+  display: none;}
+   /* Etiquetas que actúan como botones */
+  .toggle-container label {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+  z-index: 1;
+  font-weight: 600;
+  }
+
+   /* Fondo deslizante con degradado circular */
+  .toggle-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: radial-gradient(circle, #C1B2FA, #8659D9);
+  border-radius: 25px;
+  transition: left 0.3s ease;
+  }
+   /* Cambiar la posición del fondo al seleccionar "Especialista" */
+  #seguimiento:checked ~ .toggle-background {
+    left: 50%;
+  }
+  
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+  
+}
+
+.dropbtn {
+  background-color: #ffffff;
+  color: #3D348B;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-family: "Quicksand", serif;
+}
+
+.dropbtn:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  z-index: 1;
+  text-align: left;
+  font-family: "Quicksand", serif;
+  
+}
+
+.dropdown-content.show {
+  display: block;
+  font-family: "Quicksand", serif;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: "Quicksand", serif;
+  
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  font-family: "Quicksand", serif;
+}
+
+  .section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .section h2 {
+    margin-top: 20px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #3D348B;
+  }
+  
+  .section h3 {
+    margin-top: 20px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #3D348B;
+  }
+
+  
+  .card {
+    display: flex;
+    align-items: center;
+    background-color: #f3eaff;
+    border-radius: 15px;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .calendario,
+  .historia{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .upload-btn {  
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #8659D9;
+    display: flex;
+    align-items: center;
+    margin: 20px auto 0 auto;
+    gap: 10px; /* Espacio entre el icono y el texto */
+    cursor: pointer;
+    box-shadow: 0px 8px 16px 0px rgba(0.3,0.3,0.1,0.3);
+    font-family: "Quicksand", serif;
+  }
+  
+
+  .upload-btn .lock{
+        width: 20px;
+        height: 20px;
+  }
+  .desafios-container {
+    padding: 10px 20px;
+    font-family: "Quicksand", sans-serif;
+  }
+  
+  .desafios-container h3 {
+    color: #3D348B;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .desafio {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 30px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .desafio img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    border-radius: 50%;
+  }
+  
+  .desafio span {
+    font-size: 14px;
+    color: #000;
+    font-weight: 500;
+  }
+  
+  
+#file-input {
+  display: none;
+
+}
+
+.modal-content {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 390px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: absolute;
+  left: 60px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "Quicksand", serif;
+}
+
+.confirm-btn {
+  background-color: #8659D9;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Quicksand", serif;
+}
+
+.cancel-btn {
+  background-color: #E5E7EB;
+  color: #374151;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;font-family: "Quicksand", serif;
+}
+
+/* Íconos simulados */
+.icon-calendar::before {
+  content: "📅";
+  margin-right: 8px;
+}
+
+.icon-clock::before {
+  content: "⏰";
+  margin-right: 8px;
+}

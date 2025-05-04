@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Quicksand:wght@300..700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+  background: #ffffff;
+  max-width: 390px;
+  max-height: 845px;
+  
+}
+
+.contenedor {
+  width: 390px;
+  max-height: 845px;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.regresar{
+  position: relative;
+   width: 35px;
+   height: 35px;
+   bottom: 30px;
+   left: 10px;
+}
+/* Barra azul superior */
+.barra-azul {
+  background-color: rgba(160, 215, 255, 1);
+  padding: 40px 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* Flecha de regresar */
+.boton-flecha {
+  position: absolute;
+  top: 5px; /* AJUSTA este valor para subir o bajar */
+  left: 2px; /* Ajusta si quieres moverla horizontalmente */
+  background-color:#c7d9fa;
+  border: none;
+  cursor: pointer;
+  z-index: 10; /* Para que quede por encima */
+  border-radius: 10px;
+}
+
+.flecha {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) invert(1);
+}
+
+/* Icono mental e h1 juntos */
+.peliculas{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-Pelis {
+  width: 69px;
+  height: 69px;
+}
+
+.titulo {
+  font-size: 27px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+/* Subtítulo debajo de la barra */
+.subtitulo {
+  font-size: 18px;
+  color: #000;
+  text-align: left;
+  margin: 15px 0;
+}
+
+/* Área con scroll */
+.scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 10px 20px;
+}
+
+/* Tarjetas de blog */
+.blog-card {
+  display: flex;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.267);
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.2s;
+}
+
+.blog-card:hover {
+  transform: translateY(-2px);
+  background-color: #eef6ff;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.blog-info {
+  flex: 1;
+}
+
+.blog-title {
+  font-size: 16px;
+  color: #8a9edf;
+  margin: 0;
+  font-weight: 600;
+}
+
+.author {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: #999;
+}
+
+.icon-time {
+  width: 13px;
+  height: 13px;
+  margin-right: 6px;
+}
+
+  
+  

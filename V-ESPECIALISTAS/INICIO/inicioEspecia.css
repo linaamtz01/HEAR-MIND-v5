@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  max-width: 390px;
+  max-height: 845px;
+  font-family: "Quicksand", serif;
+  
+}
+
+.container{
+  background-color: #ffffff;
+  width: 390px;
+  height: 845px;
+  position: relative; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    position: relative;
+  }
+  
+  .right-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  h1 {
+    font-size: 16px;
+    margin: 0;
+    position: relative;
+    left: 40px;
+    color: #9d9d9d;
+  }
+  
+  .icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .icon, .perfil {
+    width: 35px;
+  }
+
+  .icon{
+    position: relative;
+    left: 50px;
+  }
+.popup {
+  position: absolute;
+  top: 60px;
+  left: 40px;
+  width: 90%;
+  max-width: 320px;
+  background-color: #e2e2e2;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 10;
+  align-items: center;
+}
+
+.popup h3 {
+  color: #8659D9;
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.notificaciones-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.notificacion {
+  display: flex;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.1);
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.notificacion img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.notificacion .texto {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.notificacion .texto .rol {
+  font-size: 12px;
+  color: #888;
+  font-weight: 500;
+}
+
+.notificacion p {
+  margin: 4px 0 0 0;
+  color: #333;
+}
+
+  
+  
+h2 {
+    font-size: 40px;
+    margin: 20px 0;
+    text-align: center;
+    margin-top: -15px;
+    position: relative;
+    top: 30px;
+    color: #8659D9;
+}
+
+.sub{
+    text-align: center;
+    position: relative;
+    top: 20px;
+}
+
+.main-image {
+    width: 100%; /* Ajusta el tamaño según sea necesario */
+    height: 400px; /* Mantiene la proporción de la imagen */
+    border-radius: 0px; /* Opcional: agrega bordes redondeados */
+    margin: 30px; /* Espacio debajo de la imagen */
+}
+.Cuadro-azul{
+    width: 105%;
+    height: 65%;
+    background-color: #dcd6f7;
+    border-radius: 50px;
+    padding: 25px 20px;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-left: auto; /* esto lo empuja a la derecha */
+    margin-right: 50px;
+    margin-top: -30px;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 10px;
+    max-width: 240px; /* Ajusta según tu diseño */
+    margin-left: 25px; /* Centrar si quieres */
+    
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    color: rgb(2, 2, 2);
+    font-size: 16px;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none; /* Quita subrayado del enlace */
+    position: relative;
+    top: 50px;
+    box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    margin: 5px;
+}
+
+.option:hover {
+    transform: scale(1.05);
+}
+.option-icon {
+    width: 70px; /* Tamaño del ícono */
+    margin-bottom: 8px; /* Espacio entre ícono y texto */
+}
+.option span {
+    font-weight: bold;
+  }
+  

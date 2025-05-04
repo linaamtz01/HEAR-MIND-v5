@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Perfil Especialista | Hear Mind</title>
+    <link rel="stylesheet" href="JuliaM.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="contenedor">
+      <a href="../Categorias/psiq-in.html"><img class="regresar" src="../../../IMG/rregresar (2).png" alt=""></a>
+        <div class="profile">
+            <img src="../../../IMG/psic7.jpg" alt="Doctor" />
+            <div>
+              <h2>Dr. Andres Ortega  </h2>
+              <p>Psiquiatra Infantojuvenil Sistémico</p>
+            </div>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>3 años</strong>
+              Experiencia
+            </div>
+            <div class="stat">
+              <strong><span class="star">★</span> 4.5</strong>
+              Valoración
+            </div>
+          </div>
+      
+          <div class="icons">
+            <a href="tel:+573215428505"><button><i class="fa-solid fa-phone"></i></button></a>
+            <a href="https://wa.me/3173082320?text=Hola%2C%20dr%40%21%20Quiero%20comunicarme%20con%20usted%20por%3A" target="_blank"><button><i class="fa-solid fa-comment"></i></button></a>
+            <a id="correoEspecialista"><button><i class="fa-solid fa-envelope"></i></button></a>
+          </div>
+      
+          <div class="description">
+            Egresado de la Universidad de Antioquia. Enfoca su atención en el niño dentro del contexto familiar y social. Trabaja de la mano con terapeutas y educadores.
+          </div>
+
+          <div class="toggle-container">
+            <!-- Radio buttons -->
+            <input type="radio" id="paciente" name="toggle" checked>
+            <label for="paciente">Agenda</label>
+        
+            <input type="radio" id="especialista" name="toggle">
+            <label for="especialista">Blog</label>
+        
+            <!-- Fondo deslizante -->
+            <div class="toggle-background"></div>
+          </div>
+      
+          <div class="date-section">
+            <div class="month-header">
+              <button id="prevMonthBtn" onclick="changeMonth(-1)"><i class="fa fa-chevron-left"></i></button>
+              <h4 id="monthTitle"></h4>
+              <button onclick="changeMonth(1)"><i class="fa fa-chevron-right"></i></button>
+            </div>
+            
+      
+            <div class="dates" id="dateList"></div>
+      
+            <div class="times" id="timeSlots">
+              <div class="time-slot" data-time="3:00 PM">09:00 PM</div>
+              <div class="time-slot" data-time="4:00 PM">10:00 PM</div>
+              <div class="time-slot" data-time="5:00 PM">11:30 PM</div>
+              <div class="time-slot" data-time="5:00 PM">02:30 PM</div>
+              <div class="time-slot" data-time="5:00 PM">04:00 PM</div>
+              <div class="time-slot" data-time="5:00 PM">05:00 PM</div>
+            </div>
+          </div>
+      
+          <button class="btn" onclick="bookAppointment()">Agendar cita</button>
+        </div>
+      
+    </div>
+
+    <script src="JuliaM.js"></script>
+</body>
+</html>

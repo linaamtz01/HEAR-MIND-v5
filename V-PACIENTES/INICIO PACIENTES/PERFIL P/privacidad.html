@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <title>Privacidad | Hear Mind</title>
+    <link rel="stylesheet" href="privacidad.css">
+</head>
+<body>
+    <div class="contenedor">
+        <a href="perfil.html"><img class="regresar" src="../../../IMG/rregresar (2).png" alt=""></a>
+        <h1>Privacidad</h1>
+
+        <div class="pregunta1">
+            <p class="question1">¿Quieres compartir tu progreso con tus especialistas?</p>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            <label>
+        </div>
+        <div class="pregunta2">
+            <h2>Selecciona qué especialistas pueden ver tu progreso</h2>
+        <ul class="list">
+            <li class="item">
+                <label>
+                    <input type="checkbox" name="especialista" value="especialista1">
+                    Dr. Juan Pérez
+                </label>
+            </li>
+            <li class="item">
+                <label>
+                    <input type="checkbox" name="especialista" value="especialista2">
+                    Dra. María Gómez
+                </label>
+            </li>
+            <li class="item">
+                <label>
+                    <input type="checkbox" name="especialista" value="especialista3">
+                    Dr. Carlos López
+                </label>
+            </li>
+        </ul>
+        <button onclick="guardarSeleccion()">Guardar</button>
+        </div>
+        
+    </div>
+
+    <script src="privacidad.js"></script>
+
+</body>
+</html>

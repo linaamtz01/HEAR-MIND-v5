@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <title>Calendario</title>
+    
+    <!-- FullCalendar CSS -->
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
+    <link rel="stylesheet" href="calendar.css">
+</head>
+
+<body>
+    <div class="contenedor">
+    <section class="home">
+        <div class="container">
+        <header class="header-calendario">
+            <!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-left">
+        <i class="fas fa-user user-icon"></i>
+    </div>
+    <div class="top-center">
+    <span class="brand-text">Hear Mind</span>
+    </div>
+    <div class="top-right">
+        <i class="fas fa-bell notification-icon"></i>
+    </div>
+</div>
+
+<!-- TÍTULO -->
+<div class="calendar-title">
+    <h1>CALENDARIO</h1>
+</div>
+                <div class="action-bar">
+                <div class="view-options">
+                    <button id="day-view" class="view-btn">Diario</button>
+                    <button id="week-view" class="view-btn">Semanal</button>
+                    <button id="month-view" class="view-btn active">Mensual</button>
+                </div>
+            </div>
+                <div class="header-left"><div class="navigation-buttons">
+                        <button id="prev-btn" class="nav-btn"><i class="fas fa-chevron-left"></i></button>
+                        <div id="month-year" class="month-year"></div>
+                        <button id="next-btn" class="nav-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div> 
+                    
+                </div>
+            </header>
+            <div class="calendar-container">
+                <div class="main-calendar">
+                    <div id="calendar"></div>
+
+                    <!-- Sección de eventos del mes -->
+                    <div class="monthly-events">
+                        <h3 class="events-title">Proximos eventos del mes</h3>
+                        <div id="event-list" class="event-list">
+                            <!-- Los eventos se insertarán aquí dinámicamente -->
+                        </div>
+                </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button id="today-btn" class="today-btn">
+                    <i class="fas fa-calendar-day"></i> Hoy
+                </button>
+                <button id="new-event-btn" class="new-event-btn">
+                    <i class="fas fa-plus"></i> NUEVO EVENTO
+                </button>
+            </div>
+            
+        </div>
+    </section>
+
+    <!--MENÚ-->
+
+    <div class="menu">
+        <ul>
+          <li class="list" onclick="setActiveIndex(0)">
+              <a href="../INICIO PACIENTES/iniciopacientes.html">
+                  <span class="icon"><i class="fi fi-rr-home"></i></span>
+                  <span class="text">Inicio</span>
+              </a>
+          </li>
+          <li class="list active" onclick="setActiveIndex(1)">
+              <a href="calendar.html">
+                  <span class="icon"><i class="fi fi-rr-calendar-clock"></i></span>
+                  <span class="text">Calendario</span>
+              </a>
+          </li>
+          <li class="list" onclick="setActiveIndex(2)">
+              <a href="../RECURSOS/recursosmenu.html">
+                  <span class="icon"><i class="fi fi-rr-apps"></i></span>
+                  <span class="text">Recursos</span>
+              </a>
+          </li>
+          <li class="list" onclick="setActiveIndex(3)">
+              <a href="../RETO/reto.html">
+                  <span class="icon"><i class="fi fi-rr-user-hard-work"></i></span>
+                  <span class="text">Desafío</span>
+              </a>
+          </li>
+          <li class="list" onclick="setActiveIndex(4)">
+              <a href="../ESPECIALISTAS/especialistas.html">
+                  <span class="icon"><i
+                      class=
+                      "fi fi-rr-user-md"
+                      ></i></span>
+                  <span class="text">Especialistas</span>
+              </a>
+          </li>
+          <div class="indicador"></div>
+        </ul>
+      </div>
+    
+
+
+
+    
+</div>
+<!-- Modal para eventos -->
+<div id="event-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2 id="event-title" class="event-title"></h2>
+        </div>
+
+        <div class="modal-body">
+            <div class="event-detail">
+                <i class="fas fa-clock"></i>
+                <span id="event-date" class="event-info"></span>
+            </div>
+
+            <div class="event-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <span id="event-location" class="event-info">Sin ubicación</span>
+            </div>
+
+            <div class="event-detail">
+                <i class="fas fa-align-left"></i>
+                <span id="event-description-text" class="event-info">Sin descripción</span>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button id="delete-event" class="btn-danger">
+                <i class="fas fa-trash"></i> Eliminar
+            </button>
+        </div>
+    </div>
+</div>
+    <!-- Modal para nuevo evento -->
+<div id="new-event-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2><i class=""></i>Nuevo Evento</h2>
+        <form id="event-form">
+            <div class="form-group">
+                <label for="event-name">Título:</label>
+                <input type="text" id="event-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="event-start"><i class="fas fa-calendar-day"></i> Inicio:</label>
+                <input type="datetime-local" id="event-start" required>
+            </div>
+
+            <div class="form-group">
+                <label for="event-end"><i class="fas fa-calendar-times"></i> Fin:</label>
+                <input type="datetime-local" id="event-end">
+            </div>
+
+            <!-- NUEVO: Campo de ubicación -->
+            <div class="form-group">
+                <label for="event-location"><i class="fas fa-map-marker-alt"></i> Ubicación:</label>
+                <input type="text" id="event-location" placeholder="Ej: Auditorio Principal, Sala 2">
+            </div>
+
+            <div class="form-group">
+                <label for="event-color"><i class="fas fa-palette"></i> Color:</label>
+                <div id="color-picker" class="form-control">
+                    <span class="color-circle" style="background-color: #b4ff78;" value="#b4ff78"></span>
+                    <span class="color-circle" style="background-color: #78d1ff;" value="#78d1ff"></span>
+                    <span class="color-circle" style="background-color: #d378ff;" value="#d378ff"></span>
+                    <span class="color-circle" style="background-color: #ffd478;" value="#ffd478"></span>
+                    <span class="color-circle" style="background-color: #cb4141;" value="#cb4141"></span>
+                </div>
+                <input type="hidden" id="event-color" name="event-color" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="event-description"><i class="fas fa-align-left"></i> Descripción:</label>
+                <textarea id="event-description" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn-primary">
+                <i class="fas fa-save"></i> Guardar
+            </button>
+        </form>
+    </div>
+</div>
+
+    <!-- FullCalendar JS -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales/es.js'></script>
+    <script src="calendar.js"></script>
+</body>
+</html>

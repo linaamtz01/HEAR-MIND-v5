@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Talleres | Hear Mind</title>
+        <link rel="stylesheet" href="talleres.css"> 
+        <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+      </head>
+    <body>
+        
+        <div class="container">
+            <div class="cont-header">
+              <div class="header-bar">
+                <a href="../recursos.html"><img class="regresar" src="../../../IMG/whiteregresar.png" alt=""></a>
+                <div class="titulo">
+                    <h1>Talleres</h1>
+                </div> 
+              </div>
+           
+            <form class="search-container" id="formBusqueda">
+                <input type="text" id="busqueda" placeholder="Buscar...">
+                <button type="submit" class="search-button" id="btnBuscar" aria-label="Buscar">
+                  <!-- Ícono de lupa -->
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <line x1="16.5" y1="16.5" x2="22" y2="22" stroke="currentColor" stroke-width="2" />
+                  </svg>
+                </button>
+              </form>
+              <div class="curve" style="height: 110px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-3.61,68.69 C150.00,149.60 350.79,49.01 501.46,59.83 L500.00,149.60 L0.00,149.60 Z" style="stroke: none; fill: #fcfafa;"></path></svg></div>
+            </div>
+
+            <div class="taller-list">
+                <div class="taller-card" data-id="taller-1">
+                    <h3><i class="fi fi-rr-to-do"></i> Taller de Autoestima</h3>
+                    <div class="meta">
+                      <span class="tag verde">Publicado</span>
+                    </div>
+                    <div class="meta fecha"><i class="fi fi-rr-calendar"></i> 12/04/2025</div>
+                    <p class="meta">Archivo: <a href="#">Descargar PDF</a></p>
+                    <p class="descripcion oculto">Taller enfocado en fortalecer la autoestima de los participantes.</p>
+                    <div class="botones">
+                      <button class="ver" data-id="taller-1" onclick="verTaller(this)"><i class="fi fi-rr-eye"></i> Ver</button>
+                    <button class="editar" data-id="taller-1"  onclick="editarTaller(this)"><i class="fi fi-rr-pencil"></i> Editar</button>
+                    <button class="eliminar" data-id="taller-1" onclick="eliminarTaller(this)"><i class="fi fi-rr-trash"></i> Eliminar</button>
+                  </div>
+                  </div>
+                  <div class="taller-card" data-id="taller-2">
+                    <h3><i class="fi fi-rr-to-do"></i> Taller de Estres</h3>
+                    <div class="meta">
+                      <span class="tag verde">Publicado</span>
+                    </div>
+                    <div class="meta fecha"><i class="fi fi-rr-calendar"></i> 12/04/2025</div>
+                    <p class="meta">Archivo: <a href="#">Descargar PDF</a></p>
+                    <div class="botones">
+                      <button class="ver" data-id="taller-2" onclick="verTaller(this)"><i class="fi fi-rr-eye"></i> Ver</button>
+                    <button class="editar" data-id="taller-2"  onclick="editarTaller(this)"><i class="fi fi-rr-pencil"></i> Editar</button>
+                    <button class="eliminar" data-id="taller-2" onclick="eliminarTaller(this)"><i class="fi fi-rr-trash"></i> Eliminar</button>
+                  </div>
+                </div>
+                  <div class="taller-card" data-id="taller-3">
+                    <h3><i class="fi fi-rr-to-do"></i> Taller de Ansiedad</h3>
+                    <div class="meta">
+                      <span class="tag verde">Publicado</span>
+                    </div>
+                    <div class="meta fecha"><i class="fi fi-rr-calendar"></i> 12/04/2025</div>
+                    <p class="meta">Archivo: <a href="#">Descargar PDF</a></p>
+                    <div class="botones">
+                      <button class="ver" data-id="taller-3" onclick="verTaller(this)"><i class="fi fi-rr-eye"></i> Ver</button>
+                    <button class="editar" data-id="taller-3"  onclick="editarTaller(this)"><i class="fi fi-rr-pencil"></i> Editar</button>
+                    <button class="eliminar" data-id="taller-3" onclick="eliminarTaller(this)"><i class="fi fi-rr-trash"></i> Eliminar</button>
+                  </div>
+                </div>
+                <div class="btnpub" onclick="abrirModal('modalPublicar')"><i id="plus" class="fi fi-br-plus"></i></div>
+              </div>
+              
+              
+              <!-- Modal Publicar Taller -->
+  <div id="modalPublicar" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal('modalPublicar')">&times;</span>
+      <h2><i class="fi fi-rr-bullhorn"></i> Publicar Taller</h2>
+      <input type="text" id="tituloPublicar" placeholder="Título del taller">
+      <input type="date" id="fechaPublicar" placeholder="Fecha">
+      <textarea id="descripcionPublicar" placeholder="Descripción" rows="4"></textarea>
+      <div class="custom-file-input">
+        <input type="file" id="archivoEditar" />
+        <span>Seleccionar archivo</span>
+      </div>
+      <p id="nombreArchivo">Ningún archivo seleccionado</p>      
+      <button onclick="publicarTaller()">Publicar</button>
+    </div>
+  </div>
+
+  <!-- Modal Ver Taller -->
+  <div id="modalVer" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal('modalVer')">&times;</span>
+      <h2><i class="fi fi-rr-to-do"></i> Taller de Autoestima</h2>
+      <p><i class="fi fi-rr-calendar-check"></i><strong>Fecha:</strong> 12/04/2025</p>
+      <p class="meta"><strong>Descripción:</strong> Taller enfocado en fortalecer la autoestima de los participantes.</p>
+      <p><a href="#"><i class="fi fi-rr-file"></i> Descargar archivo</a></p>
+    </div>
+  </div>
+
+  <!-- Modal Editar Taller -->
+  <div id="modalEditar" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal('modalEditar')">&times;</span>
+      <h2><i class="fi fi-rr-pencil"></i> Editar Taller</h2>
+      <input type="text" id="tituloEditar" value="Taller de Autoestima">
+      <input type="date" id="fechaEditar" value="2025-04-12">
+      <textarea id="descripcionEditar" rows="4">Taller enfocado en fortalecer la autoestima de los participantes.</textarea>
+      <div class="custom-file-input">
+        <input type="file" id="archivoEditar" />
+        <span>Seleccionar archivo</span>
+      </div>
+      <p id="nombreArchivo">Ningún archivo seleccionado</p>      
+      <button class="btnsave" onclick="guardarCambios()">Guardar Cambios</button>
+    </div>
+    
+        </div>
+   
+        <div id="modalConfirmacion" class="modal">
+          <div class="modal-contenido">
+            <p>¿Estás seguro de que deseas eliminar este taller?</p>
+            <button onclick="confirmarEliminacion()">Sí</button>
+            <button onclick="cerrarModal('modalConfirmacion')">Cancelar</button>
+          </div>
+        </div>
+        <div id="toast" class="toast"></div>
+
+
+<script src="talleres.js"></script>
+
+</body>
+</html>

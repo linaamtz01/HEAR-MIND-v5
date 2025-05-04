@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    max-width: 390px;
+    max-height: 845px;
+    font-family: "Quicksand", serif;
+    padding-bottom: 100px;
+
+  }
+
+  .contenedor {
+    width: 390px;
+    min-height: 845px;
+    margin: auto;
+    padding-bottom: 100px; 
+    background:#fcfafa;
+    display: flex;
+    flex-direction: column; /* Apila los elementos en columna */
+    align-items: left; 
+    
+}
+
+.regresar{
+  position: relative;
+   width: 35px;
+   height: 35px;
+   top: 40px;
+   left: 20px;
+}
+
+.titulo {
+  font-size: 17px;
+  text-align: left;
+  margin-top: 40px;
+  position: relative; 
+  display: block;
+  left: 55px;
+  bottom: 42px;
+  color: #fff;
+}
+
+.search-container {
+  position: relative;
+  background: white;
+  padding: 8px 16px;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 300px;
+  height: 45px;
+  left: 45px;
+  bottom: 10px;
+}
+
+.search-container input[type="text"] {
+  position: relative;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 10px;
+  width: 230px;
+  height: 20px;
+  border-radius: 30px;
+  font-family: "Quicksand", serif;
+  right: 12px;
+}
+
+.search-button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  left: 12px;
+  
+}
+
+.search-button:hover {
+  background-color: #49B5E7;
+  transform: scale(1.2);
+  color: #ffffff;
+}
+
+.search-button svg {
+  width: 20px;
+  height: 20px;
+  fill: #333;
+  transition: fill 0.3s ease;
+}
+
+.search-button.clicked svg {
+  fill: white;
+}
+
+
+
+.cont-header{
+    background: linear-gradient(to bottom right,#73bee1, #A2E1FB, #CAEFEE, #edfbff);
+    width: 390px;
+    height: 250px;
+    position: relative;
+    z-index: 1;
+  }
+ 
+.curve{
+    position: absolute;
+    top: 145px;
+    z-index: 2;
+    width: 390px;
+    height: 400px;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.categorias {
+    position: relative;
+    bottom: 50px;
+    display: flex;
+    gap: 20px;
+    margin-top: 90px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 10px 15px;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: grab;
+    left: 15px;
+    -webkit-overflow-scrolling: touch;
+}
+.categorias::-webkit-scrollbar {
+    display: none;
+}
+.categorias{
+  -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.categoria {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+.categoria button {
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    width: 110px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categoria img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain; /* esto evita que una imagen se estire o deforme */
+}
+
+.categoria p {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: normal; /* 👈 asegura que no se empuje hacia abajo */
+}
+
+.categoria1 {
+    background: #c2ffb9;
+    
+}
+
+.categoria2 {
+    background: #FFEECF;
+  
+}
+.categoria3 {
+    background: #D7C6F4;
+   
+}
+
+.categoria4 {
+    background: #73bee1;
+   
+}
+.categoria5{
+    background: #f2c1ff;
+}
+
+h2{
+    margin-bottom: 45px;
+    margin-left: 10px;
+    color: #49B5E7;
+}
+
+.blog-card {
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.267);
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s;
+    width: 360px;
+    position: relative;
+    left: 10px;
+    }
+  
+  .blog-card:hover {
+    transform: translateY(-2px);
+    background-color: #eef6ff;
+  }
+  
+  .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  
+  .blog-info {
+    flex: 1;
+  }
+  
+  .blog-title {
+    font-size: 16px;
+    color: #8a9edf;
+    margin: 0;
+    font-weight: 600;
+  }
+  
+  .author {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .time {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #999;
+  }
+  
+  .icon-time {
+    width: 13px;
+    height: 13px;
+    margin-right: 6px;
+  }
+ 

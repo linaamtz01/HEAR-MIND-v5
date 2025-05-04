@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    max-width: 390px;
+    max-height: 845px;
+    font-family: "Quicksand", serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+    .regresar {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 35px;
+        height: 35px;
+        z-index: 999;
+    }
+    
+
+.container {
+    max-width: 100%;
+    padding: 20px;
+    margin: auto;
+}
+
+.titulo h1, .subtitulo h2 {
+    margin: 0;
+}
+
+.titulo{
+    position: relative;
+    left: 35px;
+    color: #7E6BC4;
+}
+
+.subtitulo {
+    margin: 10px 0 20px;
+    position: relative;
+    left: 35px;
+    bottom: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.categoria-lista-tags {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 5px 0;
+    scrollbar-width: none;
+}
+
+.categoria-lista-tags::-webkit-scrollbar {
+    display: none;
+}
+
+.categoria-tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease;
+    font-family: "Quicksand", serif;
+}
+
+/* Íconos con color de categoría */
+.categoria-tag.cine i { color: #D1BBED; }
+.categoria-tag.libros i { color: #c4ffbb; }
+.categoria-tag.juegos i { color: #91E2FF; }
+.categoria-tag.manualidades i { color: #edbbd4; }
+.categoria-tag.informativo i { color: #FFEC9A; }
+
+/* Opcional: selección visual */
+.categoria-tag.seleccionada {
+    border: 2px solid #919191;
+}
+
+
+
+.image-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3px;
+    margin: 6px 0;
+}
+
+.img-btn {
+    border: none;
+    background: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.img-btn img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.img-btn img:hover {
+    transform: scale(1.1);
+}
+
+.title-input, #tags, #enlace {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    font-size: 14px;
+    font-family: "Poppins", serif;
+}
+
+
+.upload-box {
+    border: 2px dashed #A29BFE;
+    padding: 0px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px;
+    color: gray;
+    font-weight: 400;
+    font-family: "Poppins", serif;
+    font-size: 14px;
+}
+
+#btnExaminar {
+    background-color: #C1B2FA;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: "Quicksand", serif;
+    height: 30px;
+    width: 80px;
+    position: relative;
+    left: 100px;
+    bottom: 25px;
+}
+
+#fileName{
+    position: relative;
+    font-size: 13px;
+    bottom: 20px;
+}
+
+.ipub{
+    position: relative;
+    right: 55px;
+    top: 25px;
+}
+
+
+.quill-editor {
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 0px;
+
+}
+
+.ql-toolbar.ql-snow,
+.ql-container.ql-snow {
+    border-radius: 5px;
+    font-family: "Poppins", serif;
+}
+
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.cancel-btn, .submit-btn {
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Quicksand", serif;
+    width: 180px;
+}
+
+
+.cancel-btn {
+    background-color: #DCD6F7;
+    transition: transform 0.2s;
+}
+
+.cancel-btn:hover{
+    transform: scale(1.1); 
+}
+
+.submit-btn {
+    background-color:#B2A7FC;
+    color: white;
+    transition: transform 0.2s;
+}
+
+.submit-btn:hover{
+    transform: scale(1.1);
+}
+
+#preview {
+    background: #f9f9f9;
+    border: 1px dashed #7E6BC4;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-family: "Poppins", serif;
+
+}
+
+#preview-imagen img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#preview-imagen {
+    width: 100%;
+    overflow: hidden;
+}
+
+.imagen-preview {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .post-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 30px auto;
+    max-width: 700px;
+  }
+  
+  .post-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .post-content {
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .post-content h2 {
+    color: #49B5E7;
+    margin-bottom: 10px;
+    font-family: "Quicksand", serif;
+  }
+  
+  .post-content .autor {
+    font-weight: 0;
+    margin-bottom: 10px;
+  }
+  
+  .post-content .extracto {
+    color: #333;
+    line-height: 1.6;
+    margin-top: 15px;
+  }
+  
+
+@media (min-width: 600px) {
+    .container {
+        max-width: 600px;
+    }
+    .buttons {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

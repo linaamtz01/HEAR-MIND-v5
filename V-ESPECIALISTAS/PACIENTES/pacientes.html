@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tus pacientes</title>
+    <link rel="stylesheet" href="pacientes.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+        <h1>Tus pacientes</h1>
+
+        <form class="search-container" id="formBusqueda">
+            <input type="text" id="busqueda" placeholder="Buscar...">
+            <button type="submit" class="search-button" id="btnBuscar" aria-label="Buscar">
+              <!-- Ícono de lupa -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" fill="none"/>
+                <line x1="16.5" y1="16.5" x2="22" y2="22" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+          </form>
+    </div>
+        <div class="container-scrollable">
+        <div class="section-R">
+            <h2 class="titulo-seccion">Recientes</h2>
+            <a href="sofiap.html">
+            <div class="patient-card">
+                <img class="perfil" src="../../IMG/perfilpaciente2.jpg" alt="Avatar">
+                <span class="patient-name">Sofía Gonzales Lopez</span>
+                <img class="flecha" src="../../IMG/angulo-derecho.png" alt="">
+            </div>
+        </a>
+
+        <a href="arturop.html">
+            <div class="patient-card" src="arturop.html" >
+                <img class="perfil" src="../../IMG/perfilpaciente2.jpg" alt="Avatar">
+                <span class="patient-name">Arturo Beltrán Ramírez</span>
+                <img class="flecha" src="../../IMG/angulo-derecho.png" alt="">
+            </div>
+        </a>
+
+        <a href="anap.html">
+            <div class="patient-card"  src="anap.html" >
+                <img class="perfil" src="../../IMG/perfilpaciente2.jpg" alt="Avatar">
+                <span class="patient-name">Ana Rodríguez Suárez</span>
+                <img class="flecha" src="../../IMG/angulo-derecho.png" alt="">
+            </div>
+        </div>
+    </a>
+        
+        <div class="section">
+            <h2 class="titulo-seccion">Todos</h2>
+            <a href="lilianap.html">
+            <div class="patient-card" src="lilianap.html"> 
+                <img class="perfil" src="../../IMG/perfilpaciente2.jpg" alt="Avatar">
+                <span class="patient-name">Liliana Andrea Aguilar</span>
+                <img class="flecha" src="../../IMG/angulo-derecho.png" alt="">
+            </div>
+        </a>
+ 
+        <a href="arturop.html">
+            <div class="patient-card" src="arturop.html">
+                <img class="perfil" src="../../IMG/perfilpaciente2.jpg" alt="Avatar">
+                <span  class="patient-name">Arturo Beltrán Ramírez</span>
+                <img class="flecha" src="../../IMG/angulo-derecho.png" alt="">
+            </div>
+        </a>
+
+        <a href="joshuap.html">
+            <div class="patient-card" src="joshuap.html"> 
+                <img class="perfil" src="../../IMG/perfilpaciente2.jpg" alt="Avatar">
+                <span  class="patient-name">Joshua Calderon Diaz</span>
+                <img class="flecha" src="../../IMG/angulo-derecho.png" alt="">
+            </div>
+        </a>
+
+        <a href="martinap.html">
+            <div class="patient-card" src="martinap.html">
+                <img class="perfil" src="../../IMG/perfilpaciente2.jpg" alt="Avatar">
+                <span  class="patient-name">Martina Diaz Correa</span>
+                <img class="flecha" src="../../IMG/angulo-derecho.png" alt="">
+            </div>
+        </a>
+
+        <a href="marianap.html">
+            <div class="patient-card" src="marianap.html">
+                <img class="perfil" src="../../IMG/perfilpaciente2.jpg" alt="Avatar">
+                <span  class="patient-name">Mariana Duque Guzman</span>
+                <img class="flecha" src="../../IMG/angulo-derecho.png" alt="">
+            </div>
+        </a>
+
+        <a href="josephp.html">
+            <div class="patient-card" src="josephp.html">
+                <img class="perfil" src="../../IMG/perfilpaciente2.jpg" alt="Avatar">
+                <span  class="patient-name">Joseph Echeverry Mora</span>
+                <img class="flecha" src="../../IMG/angulo-derecho.png" alt="">
+            </div>
+        </a>
+
+        <a href="maxip.html">
+            <div class="patient-card" src="maxip.html">
+                <img class="perfil" src="../../IMG/perfilpaciente2.jpg" alt="Avatar">
+                <span  class="patient-name">Maximiliano Florez</span>
+                <img class="flecha" src="../../IMG/angulo-derecho.png" alt="">
+            </div>
+        </a>
+
+        <a href="sofiap.html">
+            <div class="patient-card" src="sofiap.html">
+                <img class="perfil" src="../../IMG/perfilpaciente2.jpg" alt="Avatar">
+                <span  class="patient-name">Sofia Gonzales Lopez</span>
+                <img class="flecha" src="../../IMG/angulo-derecho.png" alt="">
+            </div> 
+        </a>
+
+        </div>
+    </div>
+    <!--MENÚ-->
+
+    <div class="menu">
+        <ul>
+          <li class="list" onclick="setActiveIndex(0)">
+              <a href="../INICIO/inicioEspecia.html">
+                  <span class="icon"><i class="fi fi-rr-home"></i></span>
+                  <span class="text">Inicio</span>
+              </a>
+          </li>
+          <li class="list" onclick="setActiveIndex(1)">
+              <a href="../CALENDARIO/calendar.html">
+                  <span class="icon"><i class="fi fi-rr-calendar-clock"></i></span>
+                  <span class="text">Agenda</span>
+              </a>
+          </li>
+          <li class="list" onclick="setActiveIndex(2)">
+              <a href="../RECURSOS/recursos.html">
+                  <span class="icon"><i class="fi fi-rr-apps"></i></span>
+                  <span class="text">Recursos</span>
+              </a>
+          </li>
+          <li class="list" onclick="setActiveIndex(3)">
+              <a href="../RETO/reto.html">
+                  <span class="icon"><i class="fi fi-rr-user-hard-work"></i></span>
+                  <span class="text">Retos</span>
+              </a>
+          </li>
+          <li class="list active" onclick="setActiveIndex(4)">
+              <a href="../PACIENTES/pacientes.html">
+                  <span class="icon"><i class="fi fi-rr-user-add"></i></span>
+                  <span class="text">Pacientes</span>
+              </a>
+          </li>
+          <div class="indicador"></div>
+        </ul>
+      </div>
+    </div>
+    <script src="pacientes.js"></script>
+</body>
+</html>

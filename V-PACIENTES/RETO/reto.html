@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Reto | Hear Mind</title>
+    <link rel="stylesheet" href="reto.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+      <div class="contenedor">
+        <h1>Tus retos</h1>
+        <p class="parrafo">¡Recuerda hacer tus compromisos!</p>
+        
+        <div class="cards">
+            <div class="card-container" onclick="voltearCarta(this)">
+              <div class="card-inner">
+                <div class="card card-front"><div class="daisy"></div></div>
+                <div class="card card-back"><div class="daisy"></div></div>
+              </div>
+            </div>
+            <div class="card-container" onclick="voltearCarta(this)">
+              <div class="card-inner">
+                <div class="card card-front"><div class="daisy"></div></div>
+                <div class="card card-back"><div class="daisy"></div></div>
+              </div>
+            </div>
+            <div class="card-container" onclick="voltearCarta(this)">
+              <div class="card-inner">
+                <div class="card card-front"><div class="daisy"></div></div>
+                <div class="card card-back"><div class="daisy"></div></div>
+              </div>
+            </div>
+            <div class="card-container" onclick="voltearCarta(this)">
+              <div class="card-inner">
+                <div class="card card-front"><div class="daisy"></div></div>
+                <div class="card card-back"><div class="daisy"></div></div>
+              </div>
+            </div>
+          </div>
+
+        
+      <div class="popup" id="popup">
+        <div class="popup-content">
+          <img class="imgreto" src="../../IMG/image 28.png" alt="reto">
+          <h3>RETO DEL DÍA</h3>
+          <p>Mírate en el espejo una vez al día</p>
+          <div class="buttons">
+            <button class="decline" onclick="cerrarReto()"><img class="boton1" src="../../IMG/cancelar.png" alt=""></button>
+            <button class="done" onclick="marcarHecho()"><img class="boton" src="../../IMG/cheque.png" alt=""></button>
+            <button class="postpone" id="botonAplazar" onclick="postergarReto()"><img class="boton" src="../../IMG/reloj.png" alt=""> </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="aplazados" id="aplazados">
+        <h4>Retos aplazados</h4>
+        <div id="aplazados-lista"></div>
+      </div>
+        
+
+      <div class="menu">
+        <ul>
+          <li class="list" onclick="setActiveIndex(0)">
+              <a href="../INICIO PACIENTES/iniciopacientes.html">
+                  <span class="icon"><i class="fi fi-rr-home"></i></span>
+                  <span class="text">Inicio</span>
+              </a>
+          </li>
+          <li class="list" onclick="setActiveIndex(1)">
+              <a href="../CALENDARIO/calendar.html">
+                  <span class="icon"><i class="fi fi-rr-calendar-clock"></i></span>
+                  <span class="text">Calendario</span>
+              </a>
+          </li>
+          <li class="list" onclick="setActiveIndex(2)">
+              <a href="../RECURSOS/recursosmenu.html">
+                  <span class="icon"><i class="fi fi-rr-apps"></i></span>
+                  <span class="text">Recursos</span>
+              </a>
+          </li>
+          <li class="list active" onclick="setActiveIndex(3)">
+              <a href="../RETO/reto.html">
+                  <span class="icon"><i class="fi fi-rr-user-hard-work"></i></span>
+                  <span class="text">Desafío</span>
+              </a>
+          </li>
+          <li class="list" onclick="setActiveIndex(4)">
+              <a href="../ESPECIALISTAS/especialistas.html">
+                  <span class="icon"><i
+                      class=
+                      "fi fi-rr-user-md"
+                      ></i></span>
+                  <span class="text">Especialistas</span>
+              </a>
+          </li>
+          <div class="indicador"></div>
+        </ul>
+      </div>
+
+      
+        
+    </div>  
+  
+  <script src="reto.js"></script>
+  <div id="toast" class="toast">¡Reto aplazado!</div>
+</body>
+</html>

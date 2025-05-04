@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+    <link rel="stylesheet" href="blog.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+</head>
+<body>
+    
+    <div class="contenedor">
+    <div class="cont-header">
+        <a href="../recursos.html"><img class="regresar" src="../../../IMG/whiteregresar.png" alt=""></a>
+        <div class="titulo">
+            <h1>Blog</h1>
+        </div>
+        <form class="search-container" id="formBusqueda">
+            <input type="text" id="busqueda" placeholder="Buscar...">
+            <button type="submit" class="search-button" id="btnBuscar" aria-label="Buscar">
+              <!-- Ícono de lupa -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" fill="none"/>
+                <line x1="16.5" y1="16.5" x2="22" y2="22" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+          </form> 
+          <div class="curve" style="height: 110px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-3.61,68.69 C150.00,149.60 350.79,49.01 501.46,59.83 L500.00,149.60 L0.00,149.60 Z" style="stroke: none; fill: #fcfafa;"></path></svg></div>
+    </div>
+
+    <div class="categorias">
+        <div class="categoria categoria1">
+          <a href="INFORMATIVO/Informativo.html"><button><img src="../../../IMG/info.webp" alt="Informativo"></button></a>
+          <p>Informativo</p>
+        </div>
+        <div class="categoria categoria2">
+          <a href="JUEGOS/juegos mentales.html"><button><img src="../../../IMG/juegos.webp" alt="Juegos Mentales"></button></a>
+          <p>Juegos Mentales</p>
+        </div>
+        <div class="categoria categoria3">
+          <a href="MANUALIDADES/Manualidades.html"><button><img src="../../../IMG/manualidades.webp" alt="Manualidades"></button></a>
+          <p>Manualidades</p>
+        </div>
+        <div class="categoria categoria4">
+            <a href="LIBROS/libros.html"><button><img src="../../../IMG/libros.png" alt="Libros"></button></a>
+            <p>Libros</p>
+          </div>
+          <div class="categoria categoria5">
+            <a href="CINE/peliculas.html"><button><img src="../../../IMG/cine.png" alt="Cine"></button></a>
+            <p>Cine</p>
+          </div>
+      </div>
+      
+
+        <!-- Sección de recomendaciones -->
+        <div class="articulos">
+            <h3>Publicados</h3>
+            <div id="articulos-publicados"></div>
+        
+            <h3>Borradores</h3>
+            <div id="articulos-borradores"></div>
+          </div>
+              <a href="publicarBlog.html"><div class="btnpub" onclick="abrirModal('modalPublicar')"><i id="plus" class="fi fi-br-plus"></i></div></a>
+        </div>
+        <a href="../BLOG/blog.html"></a>
+    <script src="blog.js"></script>
+</body>
+</html>

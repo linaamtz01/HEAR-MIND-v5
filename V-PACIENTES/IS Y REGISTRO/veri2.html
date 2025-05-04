@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Codigo | Hear Mind</title>
+    <link rel="stylesheet" href="veri2.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="cont-1">
+            <img class="icon" src="../../IMG/iconverificacion.webp" alt="">
+            <p class="textv">Verificación</p>
+            <p class="text">Por favor ingresa el código <br> que llegó a tu correo o telefono</p>
+            <div class="input-cod">
+                <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+            </div>
+            
+           <button onclick="verificarCodigo()" class="btn-enviar">Enviar</button>
+        </div>
+    </div>
+    <script src="veri2.js"></script>
+</body>
+</html>

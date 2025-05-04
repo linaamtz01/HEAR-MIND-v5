@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recursos</title>
+    <link rel="stylesheet" href="recursos.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+</head>
+<body>
+    <div class="contenedor">
+        <header> 
+            <div class="right-header">
+              <a href="../../IMG/perfil.html">
+                <button class="icon-button" id="perfilBtn">
+                  <img src="../../IMG/usuario (5).png" alt="Perfil" class="perfil">
+                </button>
+              </a>
+            </div>
+          </header>
+          
+        <div class="titulo">
+            <h1>Hola, <br><span>Doctor!</span></h1>
+        </div>
+        <p class="pregunta">¿Qué deseas hacer hoy?</p>
+
+        <div class="opciones">
+
+            <div class="cont1">
+                <a href="../RECURSOS/BLOG/blog.html">
+            <button class="card">
+                <img src="../../IMG/blog.png" alt="Blog">
+                <p>Blog</p>
+            </button>
+        </a>
+        </div>
+        <div class="cont2">
+            <a href="TALLERES/talleres.html">
+            <button class="card2">
+                <img src="../../IMG/talleres.png" alt="Talleres">
+                <p>Talleres</p>
+            </button>
+        </a>
+        </div>
+        <a href="LIVES/lives.html">
+            <button class="card3">
+                <img src="../../IMG/lives.png" alt="Lives">
+                <p>Lives</p>
+            </button>
+        </a>
+        </div>
+        
+        <div class="menu">
+            <ul>
+              <li class="list" onclick="setActiveIndex(0)">
+                  <a href="../INICIO/inicioEspecia.html">
+                      <span class="icon"><i class="fi fi-rr-home"></i></span>
+                      <span class="text">Inicio</span>
+                  </a>
+              </li>
+              <li class="list" onclick="setActiveIndex(1)">
+                  <a href="../CALENDARIO/calendar.html">
+                      <span class="icon"><i class="fi fi-rr-calendar-clock"></i></span>
+                      <span class="text">Calendario</span>
+                  </a>
+              </li>
+              <li class="list active" onclick="setActiveIndex(2)">
+                  <a href="../RECURSOS/recursos.html">
+                      <span class="icon"><i class="fi fi-rr-apps"></i></span>
+                      <span class="text">Recursos</span>
+                  </a>
+              </li>
+              <li class="list" onclick="setActiveIndex(3)">
+                  <a href="../RETO/reto.html">
+                      <span class="icon"><i class="fi fi-rr-user-hard-work"></i></span>
+                      <span class="text">Desafío</span>
+                  </a>
+              </li>
+              <li class="list" onclick="setActiveIndex(4)">
+                  <a href="../PACIENTES/pacientes.html">
+                      <span class="icon"><i class="fi fi-rr-user-add"></i></span>
+                      <span class="text">Especialistas</span>
+                  </a>
+              </li>
+              <div class="indicador"></div>
+            </ul>
+          </div>
+
+        
+    </div>
+</body>
+</html>

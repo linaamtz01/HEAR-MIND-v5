@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=390, initial-scale=1.0" />
+  <title>Nuevo Reto</title>
+  <link rel="stylesheet" href="publicarReto.css">
+</head>
+<body>
+
+      <div class="container">
+        <h2 class="title">NUEVO RETO</h2>
+    
+        <div class="reto-card">
+          <img src="../../IMG/corazonPesas.png" alt="imagen reto" class="reto-img" />
+          <h3>RETO DEL DÍA</h3>
+          <textarea placeholder="Escribe el reto..."></textarea>
+        </div>
+    
+        <div class="visual-row">
+          <label class="visual-label">Visualización:</label>
+          <div class="custom-select">
+            <div class="select-display" id="visualizacion-actual">
+              Seleccione una opción
+              <span class="flecha-select">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                  <path d="M6 9l6 6 6-6" stroke="#333" stroke-width="2" fill="none"/>
+                </svg>
+              </span>
+              
+            </div>
+            <div class="select-options" id="opciones-visual">
+              <div class="opcion">Mis pacientes</div>
+              <div class="opcion" id="opcion-pacientes">Seleccionar pacientes</div>
+            </div>
+          </div>
+        </div>
+        
+
+          <div id="lista-pacientes" class="pacientes-container" style="display: none;">
+            <div class="pacientes-header">
+              <h4>Mis pacientes</h4>
+              <button id="cerrar-lista" class="cerrar-btn">✕</button>
+            </div>
+            <ul class="lista-pacientes">
+              <li><input type="checkbox" id="ana" /> <label for="ana">Ana Rodríguez Suarez</label></li>
+              <li><input type="checkbox" id="arturo" /> <label for="arturo">Arturo Beltrán Ramírez</label></li>
+              <li><input type="checkbox" id="joseph" /> <label for="joseph">Joseph Echeverry Mora</label></li>
+              <li><input type="checkbox" id="joshua" /> <label for="joshua">Joshua Calderón Diaz</label></li>
+              <li><input type="checkbox" id="liliana" /> <label for="liliana">Liliana Andrea Aguilar</label></li>
+              <li><input type="checkbox" id="mariana" /> <label for="mariana">Mariana Duque Guzmán</label></li>
+              <li><input type="checkbox" id="martina" /> <label for="martina">Martina Diaz Correa</label></li>
+              <li><input type="checkbox" id="maximiliano" /> <label for="maximiliano">Maximiliano Flórez Parra</label></li>
+              <li><input type="checkbox" id="sofia" /> <label for="sofia">Sofia Gonzales López</label></li>
+            </ul>
+            <button id="btn-listo" class="boton-listo">Listo</button>
+          </div>
+          
+          
+    
+        <div class="buttons">
+          <button class="cancelar">Cancelar</button>
+          <button class="subir">Subir</button>
+        </div>
+
+        <a href="reto.html">
+          <button class="boton-izquierda">
+              <img src="../../IMG/siguiente.png" alt="siguiente">
+          </button>
+      </a>
+      </div>
+    
+      <script src="publicarReto.js"></script>
+</body>
+</html>

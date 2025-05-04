@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Inicio Sesión | Hear Mind</title>
+    <link rel="stylesheet" href="inicio.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="contenedor">
+          <img class="logo" src="../../IMG/logocompleto.png" alt="">  
+    <div class="cont-fondo">
+      <div class="toggle-container">
+        <input type="radio" id="paciente" name="toggle" checked onclick="seleccionarUsuario('paciente')">
+        <input type="radio" id="especialista" name="toggle" onclick="seleccionarUsuario('especialista')">
+      
+        <div class="toggle-background"></div>
+      
+        <label for="paciente">Paciente</label>
+        <label for="especialista">Especialista</label>
+      </div>
+      
+        <p class="mensaje-bienvenida">Welcome to Hear Mind</p>
+        <form id="formulario-login">
+          <div class="input-cont">
+            <input type="text" id="usuario" placeholder="Usuario" required>
+            <i class='bx bxs-user' style="color: #258CBC;"></i>
+        
+            <input type="password" id="contraseña" placeholder="Contraseña" required>
+            <i class='bx bxs-lock-alt' style='color:#258CBC'></i>
+          </div>
+        
+          <button class="btn-is" type="submit">Inicia sesión</button>
+        </form>
+        
+        <div class="opcion-inicio">
+        <a href="verificacion.html" class="link-olvido">¿Olvidaste tu contraseña?</a>
+         <br> <span>o continúa con</span>
+          <br>
+          <img src="../../IMG/google.png" alt="Google">
+          <img src="../../IMG/telefono.png" alt="Teléfono">
+        </div>
+      </div>
+      <div id="toast" class="toast"></div>
+      </div>
+
+      <script src="inicio.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  max-width: 390px;
+  max-height: 845px;
+  font-family: "Quicksand", serif;
+  overflow-x: hidden; 
+}
+
+.contenedor{
+    position: relative;
+  background-color: #ffffffaf;
+  width: 390px;
+  height: 845px;
+  overflow: hidden;
+}
+
+.regresar{
+  position: relative;
+  width: 35px;
+  height: 35px;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+.image{
+        width: 90%; /* Ajusta el tamaño según sea necesario */
+        height: 290px; /* Mantiene la proporción de la imagen */
+        border-radius: 20px; /* Opcional: agrega bordes redondeados */
+        margin-bottom: 0; /* Espacio debajo de la imagen */
+        margin-left: 15px;
+   z-index: 1;
+  align-items: center;
+}
+.scroll-area {
+    height: calc(100% - 290px); /* resta altura de la imagen */
+    overflow-y: scroll; /* solo scroll vertical */
+    overflow-x: hidden; /* 👈 evita scroll horizontal */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Edge/IE */
+  }
+  
+  .scroll-area::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+  
+  .Cuadro-azul {
+    width: 100%; /* 👈 ocupa todo el ancho disponible */
+    background-color: rgba(232, 243, 253, 0.918);
+    border-radius: 60px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.349);
+    padding: 25px 20px;
+    margin: -30px 0 25px 0;
+    text-align: left;
+    height: auto;
+    box-sizing: border-box;
+    margin-top: -5px;
+  }
+  
+h1{
+    font-size: 27px;
+    color: #2BA8DF;
+}
+h2{
+    font-size: 13px;
+    margin-top: 30px;
+}
+h3{
+    font-size: 23px;
+    margin-top: 30px;  
+}
+.boton-izquierda {
+   
+    bottom: 60px;
+    left: 10px;
+    background-color: #ffffff00;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: -4px;
+    
+}

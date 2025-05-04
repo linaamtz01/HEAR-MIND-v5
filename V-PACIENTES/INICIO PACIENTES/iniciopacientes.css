@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  max-width: 390px;
+  max-height: 845px;
+  font-family: "Quicksand", serif;
+  
+}
+
+.contenedor{
+  background: #f6fcfd;
+  width: 390px;
+  height: 845px;
+}
+
+.perfil{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    margin: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+
+
+.circulo{
+    background: radial-gradient(#56C3F5, #77D0FC, #b0e2ff,#C5E6FF);
+    width: 300px;
+    height: 280px;
+    border-radius: 100%;
+    justify-content: center;
+    position: absolute;
+    left: 40px;
+    top: 60px;
+    cursor: pointer;
+}
+
+.seguimiento{
+  position: absolute;
+  width: 230px;
+  height: 30px;
+  background-color: white;
+  color: rgb(43, 137, 184);
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+  z-index: 2;
+  font-family: "Quicksand", serif;
+  top: 180px;
+  left: 35px;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.125);
+
+}
+
+.call{
+  position: absolute;
+  width: 242px;
+  height: 39px;
+  background-color: #F6D4D4;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+  z-index: 2;
+  font-family: "Poppins", serif;
+  top: 400px;
+  left: 35px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 3px;
+}
+
+.iconcall{
+  padding-right: 10px;
+}
+
+
+/*SESIÓN EMOCIONES SEMANAL*/
+.week-section{
+  position: absolute;
+  top: 410px;
+  margin: 30px;
+  position: absolute;
+  top: 450px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 290px;
+  height: 150px;
+  margin-top: 20px;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.emotion-week{
+  position: relative;
+  width: 280px;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+h2{
+  position: absolute;
+  font-size: 15px;
+  text-decoration: underline;
+  left: 20px;
+  top: 10px;
+}
+
+p{
+  position: relative;
+  font-weight: 500;
+}
+
+
+.day {
+  text-align: center;
+}
+
+.day img {
+  width: 40px;
+  height: 40px;
+}
+
+.notificacion{
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  left: 340px;
+  top: 20px;
+  cursor: pointer;
+}
+/* Estilo del modal (oculto por defecto) */
+.modal {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: 390px;
+  height: 844px;
+  background-color: rgba(187, 225, 255, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenido del modal */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 300px;
+  max-height: 450px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón de cierre */
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Estilos de cada notificación */
+.notification {
+  display: flex;
+  align-items: center;
+  background: #f8f9fa;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.notification img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.fecha {
+  width: 250px;
+  height: 50px;
+  position: relative;
+  top: 80px;
+  left: 25px;
+  font-size: 38px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: "Poppins", serif;
+}
+
+/* MENÚ */
+:root{
+  --crl: #ffffff;
+}
+
+.menu{
+  bottom: 0;
+  position: fixed;
+  width: 390px;
+  height: 70px;
+  background: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  max-width: 390px; /* para coincidir con tu diseño */
+}
+
+.menu ul{
+  display: flex;
+  width: 350px;
+  position: relative;
+  right: 20px;
+}
+
+.menu ul li{
+  position: relative;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+
+.menu ul li a{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.menu ul li a .icon{
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.5em;
+  text-align: center;
+  transition: 0.5s;
+  color: #67C0EA;
+  
+}
+
+
+.menu ul li.active a .icon{
+  transform: translateY(-35px);
+  color: white;
+}
+
+.menu ul li a .text{
+  position: absolute;
+  color: #00A7F5;
+  font-weight: 0.75em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.text{
+  font-size: 12px;
+  color: #00A7F5;
+}
+
+.menu ul li.active a .text{
+ opacity: 1; 
+ transform: translateY(10px);
+}
+
+.indicador{
+  position: absolute;
+  top: -50%;
+  width: 60px;
+  height: 60px;
+  background-color: #A0D7FF;
+  border-radius: 50%;
+  border: 4px solid var(--crl);
+  transition: transform 0.4s ease, background-color 0.3s ease;
+}
+
+
+
+.menu ul li:nth-child(1).active ~ .indicador{
+  transform: translateX(calc(70px *0));
+}
+.menu ul li:nth-child(2).active ~ .indicador{
+  transform: translateX(calc(70px *1));
+}
+.menu ul li:nth-child(3).active ~ .indicador{
+  transform: translateX(calc(70px *2));
+}
+.menu ul li:nth-child(4).active ~ .indicador{
+  transform: translateX(calc(70px *3));
+}
+.menu ul li:nth-child(5).active ~ .indicador{
+  transform: translateX(calc(70px *4));
+}
+
+.indicador.animate {
+  transition: 0.5s ease;
+}
+
+/* ------*/
+
+a {
+  text-decoration: none;     /* Quita subrayado */
+  color: inherit;            /* Usa el color del texto normal */
+}
+
+a:visited{
+  text-decoration: none;
+color: inherit;
+}

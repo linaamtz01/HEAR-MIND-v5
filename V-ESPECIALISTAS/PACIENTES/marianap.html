@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariana Duque Guzman</title>
+    <link rel="stylesheet" href="perfil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+      <div class="profile-header">
+        <div class="back-btns">
+          <a href="pacientes.html">
+            <img class="back" src="../../IMG/rregresar (2).png" alt="">
+          </a>
+  
+        </div>
+          <img class="imgperfil" src="../../IMG/perfilpaciente2.jpg" alt="">
+
+
+      <div class="info">
+          <h1>Mariana Duque Guzman</h1>
+          <p class="paciente">Paciente</p>
+          <div class="extra">
+          <div class="details">
+              <span>30 años</span>
+              <span class="minuscula">Edad</span>
+            </div>
+            <div class="separador"></div>
+            <div class="details">
+              <span> M</span>
+              <span class="minuscula">Genero</span>
+            </div>
+          </div>
+      
+          <div class="icons">
+            <a href="tel:+573215428505"><button><i class="fa-solid fa-phone"></i></button></a>
+            <a href="https://wa.me/3173082320?text=Hola,%20queria%20hacerte%20seguimiento%20a%20tu%20progreso." target="_blank"><button><i class="fa-solid fa-comment"></i></button></a>
+            <a id="correoPaciente"><button><i class="fa-solid fa-envelope"></i></button></a>
+          </div>
+      </div>
+  </div>
+  <div class="toggle-container">
+      <!-- Radio buttons -->
+      <input type="radio" id="programa" name="toggle" checked>
+      <label for="programa">Programa</label>
+  
+      <input type="radio" id="seguimiento" name="toggle">
+      <label for="seguimiento">Seguimiento</label>
+  
+      <!-- Fondo deslizante -->
+      <div class="toggle-background"></div>
+    </div>
+  
+    <div id="programa-content" class="toggle-content">
+  
+    <div class="dropdown">
+      
+      <button class="dropbtn" id="dropdownButton" onclick="toggleDropdown()">Próximas ▼</button>
+      <div class="dropdown-content" id="dropdownMenu">
+          <a href="#" onclick="changeText('Próximas')">Próximas</a>
+          <a href="#" onclick="changeText('Anteriores')">Anteriores</a>
+    </div>
+  </div>
+  
+    <div class="section">
+      <h2>Citas programadas</h2>
+          <div class="card cita-programada"> 
+            <img class="calendario" src="../../IMG/Sin título 1.png" alt="">
+            <div class="texto">
+              <p> 10 febrero del 2025</p>
+              <p>3:00 pm</p>
+            </div>
+          </div>
+  
+        <div class="card cita-programada"> 
+          <img class="calendario" src="../../IMG/Sin título 1.png" alt="">
+          <div class="texto">
+            <p>4 marzo del 2025</p>
+            <p>9:00 am</p>
+          </div>
+        </div>
+  
+      <div class="section">
+          <h3>Historial clínico</h3>
+          <div class="card historial-clinico">
+            <img class="historia" src="../../IMG/image 64.png" alt="">
+            <div class="texto">
+              <p>20 de Enero del 2025</p>
+              <p>3:00 pm</p>
+            </div>
+        </div>
+          <div class="card historial-clinico">
+            <img class="historia" src="../../IMG/image 64.png" alt="">
+            <div class="texto">
+              <p>9 de Enero del 2025</p>
+              <p>9:00 am</p>
+            </div> 
+        </div>
+  
+          <div class="card historial-clinico"> 
+            <img class="historia" src="../../IMG/image 64.png" alt="">
+            <div class="texto">
+              <p>19 diciembre del 2024</p>
+              <p>4:00p m</p>
+            </div>
+        </div>
+  
+          <div class="card historial-clinico">
+            <img class="historia" src="../../IMG/image 64.png" alt="">
+            <div class="texto">
+              <p>2 diciembre del 2024</p>
+              <p>2:00 pm</p>
+            </div>
+        </div>
+        </div>
+        <!-- Input oculto -->
+        <input type="file" id="file-input" accept=".pdf,.doc,.docx,.txt,.odt" style="display: none;">
+
+        <!-- Botón personalizado que abre el input -->
+        <button class="upload-btn" onclick="document.getElementById('file-input').click()">
+          <i class="fa-solid fa-folder-plus"></i>
+        <span>Subir Historia Clínica</span>
+        </button>
+
+          
+  
+    </div>
+    </div>
+    <div id="seguimiento-content" class="toggle-content" style="display: none;">
+      <div class="desafios-container">
+        <h3>Desafíos cumplidos</h3>
+      
+        <div class="desafio">
+          <img src="../../IMG/image 28.png" alt="Desafío 1">
+          <span>Mírate en el espejo una vez al día</span>
+        </div>
+      
+        <div class="desafio">
+          <img src="../../IMG/image 28.png" alt="Desafío 2">
+          <span>Toma 2 litros de agua</span>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+    <div id="modal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Cita Programada</h2>
+        <p><i class="icon-calendar"></i> <strong>Fecha:</strong> 10 febrero 2025</p>
+        <p><i class="icon-clock"></i> <strong>Hora:</strong> 3:00 pm</p>
+        <p> <strong>Modalidad:</strong> Presencial</p>
+        <p>¿Qué deseas hacer?</p>
+        <div class="modal-buttons">
+          <button class="confirm-btn">Confirmar asistencia</button>
+          <button class="cancel-btn">Cancelar cita</button>
+        </div>
+      </div>
+    </div>
+    
+  
+
+    
+<script src="perfilp.js"></script>
+</body>
+</html>
