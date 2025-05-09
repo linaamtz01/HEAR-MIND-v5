@@ -7,6 +7,9 @@
     --border-color: #e0e0e0;
     --selected-color: #40b7e6;
     --hover-color: #e0f5ee;
+    --blue-text: #75CAF8;
+    --button-blue: #4ebce7;
+    --button-hover: rgb(45, 133, 155);
 }
 
 /* ========================
@@ -20,7 +23,6 @@ html, body {
     justify-content: center;
     max-width: 390px;
     max-height: 845px;
-    font-family: "Quicksand", serif;
 }
 
 /* Contenedor principal */
@@ -34,6 +36,7 @@ html, body {
     padding: 1px;
     box-sizing: border-box;
     position: relative;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* ========================
@@ -44,11 +47,22 @@ html, body {
     padding: 10px 20px;
     font-family: "Quicksand", serif;
 }
-
+.monthly-events
 .top-bar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    width: 100%;
+}
+.top-center {
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    width: 100%;
+}
+.brand-text {
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
 }
 
 .notification-icon, .user-icon {
@@ -66,16 +80,21 @@ html, body {
 .brand-text {
     font-weight: 600;
     font-size: 18px;
+    flex-grow: 1;
+    text-align: center;
 }
 
 /* ========================
       CALENDAR HEADER
 =========================== */
+.calendar-title {
+    text-align: center;
+}
+
 .calendar-title h1 {
     margin: 15px 0 10px;
-    font-size: 20px;
-    font-weight: normal;
-    font-family: "Quicksand", serif;
+    font-size: 22px;
+    font-weight: 600;
 }
 
 .header-left {
@@ -99,7 +118,7 @@ html, body {
 }
 
 .today-btn {
-    background-color: #61b4c9;
+    background-color: var(--button-blue);
     color: white;
     border: none;
     border-radius: 4px;
@@ -113,14 +132,14 @@ html, body {
 }
 
 .today-btn:hover {
-    background-color: #2d8b9b;
+    background-color: var(--button-hover);
 }
 
 .month-year {
     font-size: 20px;
     font-weight: bold;
     margin-left: 10px;
-    color: #75CAF8;
+    color: var(--blue-text);
 }
 
 /* ========================
@@ -196,11 +215,17 @@ html, body {
     padding: 0 1rem;
 }
 
+
 .button-container button {
     flex: 1;
     white-space: nowrap;
+    border-radius: 10px;
+    font-family: "Quicksand", serif;
 }
 
+thead{
+    font-family: "Quicksand", serif;
+}
 .view-options {
     display: flex;
     gap: 30px;
@@ -210,12 +235,13 @@ html, body {
 .view-btn {
     padding: 5px 20px;
     border: none;
-    background-color: #4CB6E7;
+    background-color: var(--button-blue);
     border-radius: 25px;
     cursor: pointer;
     font-size: 14px;
     transition: all 0.3s;
     color: #ffffff;
+    font-family: "Quicksand", serif;
 }
 
 .view-btn.active {
@@ -232,15 +258,8 @@ html, body {
 =========================== */
 .calendar-container {
     display: flex;
-   
     gap: 20px;
     cursor: pointer;
-}
-
-.calendar-container:hover {
-    background-color: none;
-    border: 1rem;
-    border-color: #000000;
 }
 
 .main-calendar {
@@ -261,7 +280,7 @@ html, body {
 }
 
 .events-title {
-    color: #73c9eb;
+    color: var(--blue-text);
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -282,6 +301,7 @@ html, body {
     align-items: center;
     border-left: 5px solid #4DD0E1;
 }
+
 .event-info {
     display: flex;
     flex-direction: column;
@@ -305,7 +325,80 @@ html, body {
     font-size: 0.8rem;
     font-weight: 600;
 }
+.new-event-btn {
+    border: 1px solid #4aabc9;
+    color: #59bfd9;
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+/*Emociones*/
+.daily-summary {
+    background-color: #fffffa;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
 
+.daily-title {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    color: #2c2c2c ;
+}
+
+.daily-subtitle {
+    font-size: 18px;
+    margin: 5px 0 20px 0;
+    color: #555;
+}
+
+.emotion-tracker {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.emotion-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.emotion-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.emotion-img {
+    width: 40px;
+    height: 40px;
+}
+
+.appointment-indicator {
+    margin-left: 20px;
+}
+
+.appointment-btn {
+    background-color: #4db8d2;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.appointment-btn:hover {
+    background-color: #3a9cb8;
+    transform: translateY(-2px);
+}
 /* ========================
        FULLCALENDAR
 =========================== */
@@ -314,10 +407,12 @@ html, body {
     margin: 0 auto;
     min-height: 400px;
 }
+
 .fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events {
     position: relative;
     min-height: 1em;
 }
+
 .fc {
     background-color: white;
     border-radius: 8px;
@@ -400,21 +495,24 @@ html, body {
     font-weight: 500;
 }
 
+
 /* ========================
          MODAL
 =========================== */
 .modal {
-    position: fixed;display: none;
+    position: fixed;
+    display: none;
     top: 0;
     left: 0;
     width: 390px;
     height: 845px;
     z-index: 500;
-    overflow-y: auto; /* Permite hacer scroll si es necesario */  
+    overflow-y: auto;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    background-color: rgba(0, 0, 0, 0.5);
     animation: fadeIn 0.3s;
+    font-family: "Quicksand", serif;
 }
 
 @keyframes fadeIn {
@@ -439,6 +537,7 @@ html, body {
     from { transform: translateY(-50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
+
 .modal-header {
     display: flex;
     justify-content: space-between;
@@ -447,6 +546,7 @@ html, body {
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
+
 .close {
     color: #aaa;
     float: right;
@@ -460,9 +560,16 @@ html, body {
     color: #333;
 }
 
-#event-title {
-    color: var(--primary-color);
-    margin-bottom: 15px;
+/* ========================
+       FORM ELEMENTS
+=========================== */
+/* Estilos para títulos en azul */
+h2, h3, .events-title, 
+#event-title, 
+.modal-content h2,
+.form-group label {
+    color: #769bea;
+    font-weight: 600;
 }
 
 #event-date, #event-description {
@@ -485,40 +592,53 @@ html, body {
     gap: 8px;
 }
 
+/* Estilos para inputs más redondeados */
 .form-group input,
 .form-group textarea,
-.form-group select {
+.form-group select,
+input[type="text"],
+input[type="datetime-local"],
+textarea {
     width: 90%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 20px;
     font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.form-group textarea {
-    min-height: 80px;
-    resize: vertical;
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus,
+input[type="text"]:focus,
+input[type="datetime-local"]:focus,
+textarea:focus {
+    border-color: var(--blue-text);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(117, 202, 248, 0.2);
 }
 
 /* ========================
      BOTONES MODAL
 =========================== */
 .btn-primary {
-    background-color: var(--primary-color);
+    background-color: var(--button-blue);
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 4px;
+    border-radius: 20px;
     cursor: pointer;
     font-size: 14px;
     display: flex;
     align-items: center;
     gap: 8px;
     transition: background-color 0.3s;
+    font-family: "Quicksand", serif;
 }
 
 .btn-primary:hover {
-    background-color: #2d859b;
+    background-color: var(--button-hover);
 }
 
 .btn-danger {
@@ -526,7 +646,7 @@ html, body {
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 4px;
+    border-radius: 20px;
     cursor: pointer;
     margin-top: 15px;
     display: flex;
@@ -538,6 +658,7 @@ html, body {
 .btn-danger:hover {
     background-color: #c82333;
 }
+
 .color-circle {
     width: 24px;
     height: 24px;
@@ -550,7 +671,7 @@ html, body {
 }
 
 .color-circle.selected {
-    border-color: #585858; /* O el color que quieras para marcar el seleccionado */
+    border-color: #585858;
 }
 
 /* ========================

@@ -10,9 +10,8 @@
     
     <!-- FullCalendar CSS -->
     <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
-    <link rel="stylesheet" href="calendar.css">
+    <link rel="stylesheet" href="calendarPac.css">
 </head>
-
 <body>
     <div class="contenedor">
     <section class="home">
@@ -20,15 +19,10 @@
         <header class="header-calendario">
             <!-- TOP BAR -->
 <div class="top-bar">
-    <div class="top-left">
-        <i class="fas fa-user user-icon"></i>
-    </div>
     <div class="top-center">
     <span class="brand-text">Hear Mind</span>
     </div>
-    <div class="top-right">
-        <i class="fas fa-bell notification-icon"></i>
-    </div>
+    
 </div>
 
 <!-- TÍTULO -->
@@ -36,11 +30,11 @@
     <h1>CALENDARIO</h1>
 </div>
                 <div class="action-bar">
-                <div class="view-options">
-                    <button id="day-view" class="view-btn">Diario</button>
-                    <button id="week-view" class="view-btn">Semanal</button>
-                    <button id="month-view" class="view-btn active">Mensual</button>
-                </div>
+                    <div class="view-options">
+                        <button id="day-view" class="view-btn">Diario</button>
+                        <button id="week-view" class="view-btn">Semanal</button>
+                        <button id="month-view" class="view-btn active">Mensual</button>
+                    </div>
             </div>
                 <div class="header-left"><div class="navigation-buttons">
                         <button id="prev-btn" class="nav-btn"><i class="fas fa-chevron-left"></i></button>
@@ -60,7 +54,27 @@
                         <div id="event-list" class="event-list">
                             <!-- Los eventos se insertarán aquí dinámicamente -->
                         </div>
+                        <div class="daily-summary">
+                            <h3 class="daily-title" id="current-date"><!-- Se actualizará con JS --></h3>
+                            <p class="daily-subtitle">Sintomas y actividades</p>
+                            
+                            <div class="emotion-tracker">
+                                <div class="emotion-icons">
+                                    <!-- Solo mostrará el emoji seleccionado -->
+                                    <div id="selected-emotion" class="emotion-icon">
+                                        <!-- El emoji se insertará aquí dinámicamente -->
+                                    </div>
+                                </div>
+                                
+                                <div class="appointment-indicator">
+                                    <button id="appointment-btn" class="appointment-btn">
+                                        Cita Programada
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                 </div>
+
                 </div>
             </div>
             <div class="button-container">
@@ -75,8 +89,6 @@
         </div>
     </section>
 
-    <!--MENÚ-->
-
     <div class="menu">
         <ul>
           <li class="list" onclick="setActiveIndex(0)">
@@ -86,7 +98,7 @@
               </a>
           </li>
           <li class="list active" onclick="setActiveIndex(1)">
-              <a href="calendar.html">
+              <a href="../CALENDARIO/calendar.html">
                   <span class="icon"><i class="fi fi-rr-calendar-clock"></i></span>
                   <span class="text">Calendario</span>
               </a>
@@ -115,13 +127,9 @@
           <div class="indicador"></div>
         </ul>
       </div>
-    
-
-
-
-    
 </div>
-<!-- Modal para eventos -->
+
+    <!-- Modal para eventos -->
 <div id="event-modal" class="modal">
     <div class="modal-content">
         <div class="modal-header">
@@ -153,6 +161,9 @@
         </div>
     </div>
 </div>
+
+    
+
     <!-- Modal para nuevo evento -->
 <div id="new-event-modal" class="modal">
     <div class="modal-content">
@@ -160,28 +171,6 @@
         <h2><i class=""></i>Nuevo Evento</h2>
         <form id="event-form">
             <div class="form-group">
-                <label for="event-name">Título:</label>
-                <input type="text" id="event-name" required>
-            </div>
-
-            <div class="form-group">
-                <label for="event-start"><i class="fas fa-calendar-day"></i> Inicio:</label>
-                <input type="datetime-local" id="event-start" required>
-            </div>
-
-            <div class="form-group">
-                <label for="event-end"><i class="fas fa-calendar-times"></i> Fin:</label>
-                <input type="datetime-local" id="event-end">
-            </div>
-
-            <!-- NUEVO: Campo de ubicación -->
-            <div class="form-group">
-                <label for="event-location"><i class="fas fa-map-marker-alt"></i> Ubicación:</label>
-                <input type="text" id="event-location" placeholder="Ej: Auditorio Principal, Sala 2">
-            </div>
-
-            <div class="form-group">
-                <label for="event-color"><i class="fas fa-palette"></i> Color:</label>
                 <div id="color-picker" class="form-control">
                     <span class="color-circle" style="background-color: #b4ff78;" value="#b4ff78"></span>
                     <span class="color-circle" style="background-color: #78d1ff;" value="#78d1ff"></span>
@@ -189,11 +178,33 @@
                     <span class="color-circle" style="background-color: #ffd478;" value="#ffd478"></span>
                     <span class="color-circle" style="background-color: #cb4141;" value="#cb4141"></span>
                 </div>
+            <div class="form-group">
+                <label for="event-name">Título:</label>
+                <input type="text" id="event-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="event-start"><i class=""></i>Inicio del evento:</label>
+                <input type="datetime-local" id="event-start" required>
+            </div>
+
+            <div class="form-group">
+                <label for="event-end"><i class=""></i>Fin del evento:</label>
+                <input type="datetime-local" id="event-end">
+            </div>
+
+            <!-- NUEVO: Campo de ubicación -->
+            <div class="form-group">
+                <label for="event-location"><i class="fas fa-map-marker-alt"></i>Ubicación:</label>
+                <input type="text" id="event-location" placeholder="Ej: Auditorio Principal, Sala 2">
+            </div>
+
+            
                 <input type="hidden" id="event-color" name="event-color" required>
             </div>
             
             <div class="form-group">
-                <label for="event-description"><i class="fas fa-align-left"></i> Descripción:</label>
+                <label for="event-description"><i class="fas fa-align-left"></i>Detalles:</label>
                 <textarea id="event-description" rows="3"></textarea>
             </div>
             <button type="submit" class="btn-primary">
@@ -206,6 +217,6 @@
     <!-- FullCalendar JS -->
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales/es.js'></script>
-    <script src="calendar.js"></script>
+    <script src="calendarPac.js"></script>
 </body>
 </html>
